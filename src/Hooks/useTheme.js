@@ -7,8 +7,8 @@ import {
   Gutters,
   Images,
   Layout,
-  themes,
-  DefaultVariables,
+  Variables,
+  DefaultThemes,
 } from "../Theme";
 
 export default function () {
@@ -17,20 +17,18 @@ export default function () {
 
   // Get current theme from the store
   const currentTheme = useSelector((state) => state.theme.theme || "default");
-  const currentThemes = useSelector((state) => state);
-  console.log("fff", currentThemes);
   const isDark = useSelector((state) => state.theme.darkMode);
   const darkMode = isDark === null ? colorScheme === "dark" : isDark;
   //Select the right theme light theme ({} if not exist)
   const { Variables: themeConfigVars = {}, ...themeConfig } =
-    themes[currentTheme] || {};
+    DefaultThemes[currentTheme] || {};
 
   const { Variables: darkThemeConfigVars = {}, ...darkThemeConfig } = darkMode
-    ? themes[`${currentTheme}_dark`] || {}
+    ? DefaultThemes[`${currentTheme}_dark`] || {}
     : {};
 
   const themeVariables = mergeVariables(
-    DefaultVariables,
+    Variables,
     themeConfigVars,
     darkThemeConfigVars
   );

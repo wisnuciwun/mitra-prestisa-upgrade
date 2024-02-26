@@ -38,7 +38,6 @@ import ModalEp from "./ModalEp";
 import { ModalRegisterSuccess } from "./ModalRegisterSuccess";
 import dynamicLinks from "@react-native-firebase/dynamic-links";
 import { useTheme } from "../../Hooks";
-import { Assets } from "../../Theme";
 import { Colors, Fonts } from "../../Theme/Variables";
 import { Utils } from "../../Utils";
 import {
@@ -52,6 +51,7 @@ import { setStatusUser } from "../../Store/statusUserSlice";
 import { setShowModalRegisterSuccess } from "../../Store/registerSlice";
 import { Spacer } from "../../Components/Base";
 import { SkeletonItemV1 } from "../../Components/Custom/SkeletonCard";
+import { Assets } from "../../Theme";
 
 const dataBanner = [...Array(3)];
 

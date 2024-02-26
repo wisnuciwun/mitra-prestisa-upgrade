@@ -1,3 +1,4 @@
+import { Linking } from "react-native";
 import { createNavigationContainerRef } from "@react-navigation/native";
 import React from "react";
 import { SafeAreaView, StatusBar, Dimensions } from "react-native";
@@ -5,9 +6,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import {
   StartupContainer,
-  // IntroductionContainer,
+  IntroductionContainer,
   // AuthContainer,
-  // HomeContainer,
   // DaftarHandphone,
   // FormDaftar,
   // LoginPhoneOrEmail,
@@ -138,7 +138,15 @@ const ApplicationNavigator = () => {
             name="Startup"
             component={StartupContainer}
           />
-          {/* <Stack.Screen
+          <Stack.Screen
+            name="Main"
+            component={MainNavigator}
+            options={{
+              headerShown: false,
+              animationEnabled: false,
+            }}
+          />
+          <Stack.Screen
             name="Introduction"
             component={IntroductionContainer}
             options={{
@@ -146,7 +154,7 @@ const ApplicationNavigator = () => {
               headerShown: false,
             }}
           />
-          <Stack.Screen
+          {/* <Stack.Screen
             name="Auth"
             component={AuthContainer}
             options={{
@@ -188,16 +196,8 @@ const ApplicationNavigator = () => {
             name="ResetPassword"
             component={ResetPassword}
             options={{ title: "" }}
-          /> */}
-          <Stack.Screen
-            name="Main"
-            component={MainNavigator}
-            options={{
-              headerShown: false,
-              animationEnabled: false,
-            }}
           />
-          {/* <Stack.Screen name="Category" component={CategoryContainer} />
+          <Stack.Screen name="Category" component={CategoryContainer} />
 
           <Stack.Screen
             name="SearchLocation"

@@ -3,8 +3,8 @@ import React from "react";
 import FastImage from "react-native-fast-image";
 import LinearGradient from "react-native-linear-gradient";
 import { Colors, Fonts } from "../../Theme/Variables";
-import { Assets } from "../../Theme/Assets";
 import { ButtonBase, ModalCenter, Spacer } from "../../Components/Base";
+import { Assets } from "../../Theme";
 
 const ModalEp = ({ isVisible, onPressJoin, onPressLater }) => {
   return (

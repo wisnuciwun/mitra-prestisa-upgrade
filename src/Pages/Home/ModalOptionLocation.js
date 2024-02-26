@@ -8,9 +8,9 @@ import {
 } from "react-native";
 import FastImage from "react-native-fast-image";
 import Modal from "react-native-modal";
-import { Assets } from "../../Theme/Assets";
 import { Colors, FontSize } from "../../Theme/Variables";
 import { Spacer } from "../../Components/Base";
+import { Assets } from "../../Theme";
 
 const ModalOptionLocation = ({
   isVisible,

@@ -3,7 +3,7 @@
  * Assets like Illustration or Icon
  */
 
-export const Assets = {
+export default Assets = {
   icon_verified_3x: require("../Assets/Images/Illustration/Icon/verified_3x.png"),
   icon_coin_small_3x: require("../Assets/Images/Illustration/Icon/coin_small_3x.png"),
   icon_bunga_big_3x: require("../Assets/Images/Illustration/Icon/bunga_big_3x.png"),

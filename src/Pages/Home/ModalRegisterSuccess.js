@@ -3,8 +3,8 @@ import { Text, TouchableOpacity, View } from "react-native";
 import FastImage from "react-native-fast-image";
 import Modal from "react-native-modal";
 import { Colors, Fonts } from "../../Theme/Variables";
-import { Assets } from "../../Theme/Assets";
 import { Spacer } from "../../Components/Base";
+import { Assets } from "../../Theme";
 
 export const ModalRegisterSuccess = ({ isVisible, onPressOk, ...props }) => {
   return (
