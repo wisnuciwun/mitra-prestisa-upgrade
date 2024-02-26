@@ -41,33 +41,34 @@ const StartupContainer = ({ navigation }) => {
   const init = async () => {
     await new Promise((resolve) =>
       setTimeout(() => {
-        AsyncStorage.getItem("@skip_intro").then((intro_value) => {
-          if (intro_value === "true") {
-            AsyncStorage.getItem("@login").then((login_value) => {
-              if (
-                state.guest.data.isGuest == false ||
-                state.guest.data.isGuest == undefined
-              ) {
-                // console.log('BEFORE_IF')
-                if (login_value === "true") {
-                  navigation.replace("Main");
-                  // console.log('TO_MAIN')
-                } else {
-                  navigation.replace("Auth");
-                }
-              } else {
-                navigation.replace("Main");
-                // console.log('MAIN_AS_GUESTT')
-              }
-            });
-          } else {
-            navigation.replace("Introduction");
-          }
-        });
+        navigation.replace("Introduction");
+        // AsyncStorage.getItem("@skip_intro").then((intro_value) => {
+        //   if (intro_value === "true") {
+        //     AsyncStorage.getItem("@login").then((login_value) => {
+        //       if (
+        //         state.guest.data.isGuest == false ||
+        //         state.guest.data.isGuest == undefined
+        //       ) {
+        //         // console.log('BEFORE_IF')
+        //         if (login_value === "true") {
+        //           navigation.replace("Main");
+        //           // console.log('TO_MAIN')
+        //         } else {
+        //           navigation.replace("Auth");
+        //         }
+        //       } else {
+        //         navigation.replace("Main");
+        //         // console.log('MAIN_AS_GUESTT')
+        //       }
+        //     });
+        //   } else {
+        //     navigation.replace("Introduction");
+        //   }
+        // });
 
-        // navigateAndSimpleReset('Introduction')
+        // // navigateAndSimpleReset('Introduction')
 
-        resolve(true);
+        // resolve(true);
       }, 3000)
     );
     setDefaultTheme({ theme: "default", darkMode: null });
@@ -105,7 +106,7 @@ const styles = StyleSheet.create({
 
 export default StartupContainer;
 
-dataHome = {
+const dataHome = {
   category: [
     {
       id: 1,
